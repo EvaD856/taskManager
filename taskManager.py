@@ -10,12 +10,12 @@ def printOptions():
     print("7. Quit ")
 
 def addTask():
+    tasks = {}
     task = input("Enter the task name: ")
-    tasks[task] = {
-        
-    }
+    tasks[task] = task
     print("Task '",task,"' added successfully")
     print("")
+    print(tasks)
 
 def addStep():
     taskName = input("Enter the task name to add a step to: ")
@@ -32,8 +32,8 @@ def markStep():
 def viewTasks():
     print("---- All Tasks ----")
 
-def removeTask():
-    print("Placeholder")
+# def removeTask():
+#     del tasks[}
 
 def numOfTasks():
     print("Placeholder")
@@ -55,7 +55,10 @@ def main():
         #     removeTask()
         # elif choice == "6":
         #     numOfTasks()
-        # elif choice == "7":
-        #     break
+        elif choice == "7":
+            print("Goodbye!")
+            break
+        else: 
+            print("Incorrect, please enter a valid choice.")
 
 main()
