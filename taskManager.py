@@ -11,19 +11,51 @@ def printOptions():
 
 def addTask():
     task = input("Enter the task name: ")
-    print("Task,'",task,"' added successfully")
+    tasks[task] = {
+        
+    }
+    print("Task '",task,"' added successfully")
+    print("")
 
+def addStep():
+    taskName = input("Enter the task name to add a step to: ")
+    taskDescription = input("Enter the step description: ")
+    print("Step", taskDescription,"added to task", taskName)
+    print("")
 
+def markStep():
+    nameCompleted = input("Enter the task name to mark a step as completed: ")
+    descriptionCompleted = input("Enter the step description to mark as completed: ")
+    print("Step",descriptionCompleted, "in task", nameCompleted, "marked as completed.")
+    print("")
 
-def choices():
-    choice = input("Choose an option (1-7): ")
-    if choice == "1":
-        addTask()
+def viewTasks():
+    print("---- All Tasks ----")
 
+def removeTask():
+    print("Placeholder")
+
+def numOfTasks():
+    print("Placeholder")
 
 #main function
 def main():
-    printOptions()
-    choices()
+    while True:
+        printOptions()
+        choice = input("Choose an option (1-7): ")
+        if choice == "1":
+            addTask()
+        elif choice == "2":
+            addStep()
+        elif choice == "3":
+            markStep()
+        # elif choice == "4":
+        #     viewTasks()
+        # elif choice == "5":
+        #     removeTask()
+        # elif choice == "6":
+        #     numOfTasks()
+        # elif choice == "7":
+        #     break
 
 main()
