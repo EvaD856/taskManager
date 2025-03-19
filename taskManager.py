@@ -9,34 +9,40 @@ def printOptions():
     print("6. Display Total Number of Tasks")
     print("7. Quit ")
 
-def addTask():
-    tasks = {}
-    task = input("Enter the task name: ")
-    tasks[task] = task
-    print("Task '",task,"' added successfully")
+def addTask(tasks, taskName):
+    taskName = input("Enter the task name: ")
+    tasks[taskName] = taskName
+    print("Task '",taskName,"' added successfully")
     print("")
-    print(tasks)
+    print(tasks[taskName])
 
-def addStep():
+def addStep(tasks, taskName):
     taskName = input("Enter the task name to add a step to: ")
     taskDescription = input("Enter the step description: ")
+    # print(tasks['name'])
+    tasks[taskName] = taskDescription
+    # print(tasks['description'])
     print("Step", taskDescription,"added to task", taskName)
     print("")
 
-def markStep():
-    nameCompleted = input("Enter the task name to mark a step as completed: ")
-    descriptionCompleted = input("Enter the step description to mark as completed: ")
-    print("Step",descriptionCompleted, "in task", nameCompleted, "marked as completed.")
-    print("")
+# def markStep():
+#     nameCompleted = input("Enter the task name to mark a step as completed: ")
+#     descriptionCompleted = input("Enter the step description to mark as completed: ")
+#     if nameCompleted = task
+#     print("Step",descriptionCompleted, "in task", nameCompleted, "marked as completed.")
+#     print("")
 
-def viewTasks():
+def viewTasks(taskName):
     print("---- All Tasks ----")
+    while True:
+        print(taskName)
+    
 
 # def removeTask():
 #     del tasks[}
 
-def numOfTasks():
-    print("Placeholder")
+# def numOfTasks():
+#     print("Placeholder")
 
 #main function
 def main():
@@ -44,13 +50,13 @@ def main():
         printOptions()
         choice = input("Choose an option (1-7): ")
         if choice == "1":
-            addTask()
+            addTask(tasks, taskName)
         elif choice == "2":
-            addStep()
-        elif choice == "3":
-            markStep()
-        # elif choice == "4":
-        #     viewTasks()
+            addStep(tasks, taskName)
+        # elif choice == "3":
+        #     markStep()
+        elif choice == "4":
+            viewTasks(taskName)
         # elif choice == "5":
         #     removeTask()
         # elif choice == "6":
@@ -61,4 +67,5 @@ def main():
         else: 
             print("Incorrect, please enter a valid choice.")
 
+tasks = {}
 main()
