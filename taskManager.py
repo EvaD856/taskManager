@@ -1,6 +1,7 @@
 #Note for aid, 
 #myTasks = { }
 #num_tasks = len(myTasks)
+#look at bookstore assignemt in python24-25 codespace
 
 
 #prints out options
