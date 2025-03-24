@@ -1,3 +1,8 @@
+#Note for aid, 
+#myTasks = { }
+#num_tasks = len(myTasks)
+
+
 #prints out options
 def printOptions():
     print("-----Task Manager-----")
